@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un mes a tu lado 💕</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Corazones flotantes de fondo -->
+    <div class="background-hearts" id="backgroundHearts"></div>
+
+    <!-- Pantalla de Inicio -->
+    <div id="introScreen" class="screen active">
+        <div class="intro-content">
+            <svg class="intro-heart" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <h1 class="intro-title">Un mes a tu lado</h1>
+            <p class="intro-subtitle">Hay algo especial esperándote...</p>
+            <button id="startBtn" class="start-btn">Desbloquear mi sorpresa 💕</button>
+        </div>
+    </div>
+
+    <!-- Pantalla del Juego -->
+    <div id="gameScreen" class="screen">
+        <div class="game-container">
+            <!-- Header con puntos y tiempo -->
+            <div class="game-header">
+                <div class="stat-box">
+                    <p class="stat-label">Puntos</p>
+                    <p class="stat-value" id="scoreDisplay">0 / 50</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-label">Tiempo</p>
+                    <p class="stat-value" id="timeDisplay">60s</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-label">Velocidad</p>
+                    <p class="stat-value" id="speedDisplay">1.0x</p>
+                </div>
+            </div>
+
+            <!-- Área de juego -->
+            <div class="game-area" id="gameArea">
+                <!-- Los corazones se generarán aquí dinámicamente -->
+            </div>
+
+            <!-- Overlay de Game Over -->
+            <div id="gameOverOverlay" class="game-over-overlay hidden">
+                <h3 class="game-over-title">¡Tiempo agotado!</h3>
+                <p class="game-over-score">Conseguiste <span id="finalScore">0</span> puntos</p>
+                <button id="restartBtn" class="restart-btn">Intentar de nuevo 💪</button>
+            </div>
+
+            <p class="game-hint">¡Atrapa los corazones antes de que se caigan! 💕</p>
+        </div>
+    </div>
+
+    <!-- Pantalla de Mensaje Final -->
+    <div id="messageScreen" class="screen">
+        <div class="message-content">
+            <svg class="message-heart" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <h2 class="message-title">¡Lo lograste! 💖</h2>
+            <p class="message-text">
+                Este primer mes ha sido mágico. Cada día a tu lado ha sido un regalo que no sabía que necesitaba. 
+                Me sorprendes con tu risa, con tu forma de ver el mundo, con esos pequeños detalles que hacen todo especial.
+            </p>
+            <p class="message-text-small">
+                Tengo muchas ganas de seguir construyendo esto contigo, de crear más recuerdos juntos y ver a dónde nos lleva esta hermosa historia.
+            </p>
+            
+            <!-- Video -->
+            <div class="video-container">
+                <p class="video-label">📹 Tu mensaje especial</p>
+                <video controls class="video-player">
+                    <source src="assets/video.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+            </div>
+
+            <div class="message-emojis">💕✨🌸</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
