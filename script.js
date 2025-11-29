@@ -195,14 +195,14 @@ function catchHeart(id) {
     updateDisplays();
     
     // Verificar si ganó
-    if (score >= 50) {
+    if (score >= 20) {
         winGame();
     }
 }
 
 // Actualizar displays
 function updateDisplays() {
-    scoreDisplay.textContent = `${score} / 50`;
+    scoreDisplay.textContent = `${score} / 20`;
     timeDisplay.textContent = `${timeLeft}s`;
     speedDisplay.textContent = `${speed.toFixed(1)}x`;
 }
@@ -243,4 +243,5 @@ restartBtn.addEventListener('click', startGame);
 // Inicializar cuando cargue la página
 window.addEventListener('DOMContentLoaded', () => {
     initBackgroundHearts();
+
 });
